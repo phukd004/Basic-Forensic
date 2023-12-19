@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+   <div class="container">
+      <div class="main-content">
+         <div class="left-aligned-content">
+            {% include 'myapp/system.html' %}
+            {% include 'myapp/processes.html' %}
+            {% include 'myapp/network.html' %}
+            {% include 'myapp/other.html' %}
+         </div>
+      </div>
+   </div>
+{% endblock %}

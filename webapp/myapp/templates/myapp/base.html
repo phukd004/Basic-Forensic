@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href= "{% static 'css/styles.css' %}">
+</head>
+<body>
+   <header>
+      <h1>{% block header %}Analysis Result{% endblock %}</h1>
+   </header>
+
+   <nav>
+      <a href="{% url 'home' %}"><button>how to use</button></a>
+      <a href="{% url 'result' %}"><button>View Result</button></a>
+      <a href="{% url 'upload_file' %}"><button>Upload File</button></a>
+   </nav>
+   
+   <main class="main">
+      {% block content %}
+         <h1>Requirement to Use This Program</h1>
+         <h2>Tool and Framework</h2>
+         <h3>Volatility 3 Framework <span><a href="https://github.com/volatilityfoundation/volatility3" target="_blank" style="color: yellow;">Link</a></span></h3>
+         <p>after extracting file to "tools" folder, this is way to enable the full range of volatility3 functionality in folder named "volatility3"</p>
+         <pre class="textbox">pip3 install -r requirements.txt</pre>
+         <p>CheatSheet (if you want to use others command) :</p>
+         <iframe src="{% static 'css/Volatility3_Documents.txt' %}"width="100%" height="400"></iframe>
+         <p>Basically, how to use plugins of this framework is :<p>
+         <pre class="textbox">python vol.py -f "path/to/file" <span style="color : #77ccff">[OS].[plugin].[Plugin]</span></pre>
+         <p>if you want to know plugin option :<p>
+         <pre class="textbox">python vol.py <span style="color : #77ccff">[OS].[plugin].[Plugin]</span> -h</pre>
+         <h3>WinPmem (x86 & x64) <span><a href=" https://github.com/Velocidex/WinPmem/releases" target="_blank" style="color: yellow;">Link</a></span></h3>
+         <hr class="custom-line">
+         <h2>Set up & Tutorial</h2>
+         <p>By defualt, PowerShell execution policy is set to <span style="color : #ffbb00">Restricted</span>; that means script can't run on this computer.</p>
+         <p>Command to verify the execution policy setting by using this command</p>
+         <pre class="textbox">Get-ExecutionPolicy</pre>
+         <p>Then the command to change the PowerShell script execution policy for using. <span style="color: #00a1f1;">(run as Administrator)</span></p>
+         <pre class="textbox">Set-ExecutionPolicy RemoteSigned <span style="color : red"> *after use the script, please turn execution policy to Restricted*</span></pre>
+         <p>Now, you can run script on terminal. <span style="color: #00a1f1;">(run as Administrator)</span></p>
+         <pre class="textbox">.\insightify.ps1</pre>
+      {% endblock %}
+   </main>
+
+   <footer>
+
+   </footer>
+</body>
+</html>

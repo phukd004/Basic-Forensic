@@ -1,0 +1,9 @@
+<html><body><p>File Name  : AnyDesk_fOXl3Rl.exe
+MD5        : baa891e2fa70cfca457f56d5dc08c5f5
+SHA-1      : bc08e5c361e3142c640a38147e6e63faee57edbc
+SHA-256    : 34f7bc2737f624ef86d3219e7acb1c93e5f8c05305ababa08fa339c35fa72b73
+File type  : None
+<span style='color: red;'>malicious  : 0
+</span><span style='color: orange;'>undetected : 72
+
+</span>

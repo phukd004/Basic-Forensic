@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Analysis Result{% endblock %}
+
+{% block content %}
+
+    <h3>Analysis Statistics</h3>
+    <pre>{% include 'myapp/result.txt' %}</pre>
+
+{% endblock %}
